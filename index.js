@@ -24,7 +24,7 @@ app.get('/api/entries', async (req, res) => {
 //POSTING----------
 app.post('/api/entries', async (req, res) => {
   try {
-    const entry = await Entry.create(req.body);
+    const entry = await Entry.create(req.body); //create an entry instance
     res.status(200).json(entry);
   } catch (error) {
     res.status(500).json({ message: error.message });

@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const EntrySchema = mongoose.Schema(
   {
     date: {
-      type: Number,
+      type: String,
       required: [true, 'Please enter Date as 00/00/0000'],
     },
     feelings: {
