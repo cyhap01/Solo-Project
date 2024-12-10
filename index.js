@@ -1,46 +1,23 @@
-const express = require('express');
-const mongoose = require('mongoose');
+const express = require('express'); //getting express server
+const mongoose = require('mongoose'); //mongoose to connect to mongoDB
 const app = express(); //get server
-const Entry = require('./models/entry.model.js'); //importing Entry schema
+//const Entry = require('./models/entry.model.js'); //importing Entry schema
+const entryRoute = require('./Routes/entry.route.js');
 
+//------------ROUTE HANDLERS/ CRUD FUNCTIONALITY--------------------
+//MIDDLEWARE----------
 app.use(express.json()); //to use middleware
+app.use(express.urlencoded({ extended: false })); //for forms
+
+//ROUTES-----------------
+app.use('/api/entries', entryRoute);
 
 //INITIALIZATION------------
 app.get('/', (req, res) => {
   res.send('Hello Christopher Yhap');
 });
 
-//GETTING ALL Entries ------------
-
-app.get('/api/entries', async (req, res) => {
-  try {
-    const entries = await Entry.find(req.body);
-    res.status(200).json(entries);
-  } catch (error) {
-    res.status(500).json({ message: error.message });
-  }
-});
-
-//GETTING a specific JOURNAL Date entry--------
-app.get('/api/entry/:id', async (req, res) => {
-  try {
-    const { id } = req.params;
-    const entry = await Entry.findById(id);
-    res.status(200).json(entry);
-  } catch (error) {
-    res.status(500).json({ message: error.message });
-  }
-});
-
-//POSTING----------
-app.post('/api/entries', async (req, res) => {
-  try {
-    const entry = await Entry.create(req.body); //create an entry instance
-    res.status(200).json(entry);
-  } catch (error) {
-    res.status(500).json({ message: error.message });
-  }
-});
+//---------------CONNECTING TO DATABASE AND SERVER--------------------------
 
 mongoose //connecting to DB
   .connect(

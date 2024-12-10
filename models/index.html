@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CHAPTERS Journal App</title>
+  </head>
+  <body style="color: black; background-color: white">
+    <div class="container 1">
+      <div class="container 2">
+        <h1 class="header">
+          <strong>CHAPTERS <br />Journal App</strong>
+        </h1>
+      </div>
+      <div class="form">
+        <form action="" id="journal-form" class="input" autocomplete="off">
+          <div class="fields1">
+            <label for="date">Today's Date</label>
+            <input id="date" type="text" placeholder="00/00/0000" />
+          </div>
+          <div class="fields2">
+            <label for="feelings">How are you feeling?</label>
+            <input
+              id="feelings"
+              type="text"
+              placeholder=" Tells me your emotions."
+            />
+          </div>
+          <div class="fields3">
+            <label for="Entry">Entry</label>
+            <input
+              id="entry"
+              type="text"
+              placeholder=" When you're ready tell me everything."
+            />
+          </div>
+          <div class="button">
+            <input
+              class="btn btn-success add-btn"
+              type="submit"
+              value="Enter"
+            />
+          </div>
+        </form>
+        <div class="table">
+          <table class="table-heading">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Feelings</th>
+                <th>Entry</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody class="entries">
+              <tr>
+                <td>00/00/00</td>
+                <td>Feelings</td>
+                <td>Entry</td>
+                <td>
+                  <a href="" class="btn btn-warning btn-sm edit">Update</a>
+                  <a href="" class="btn btn-warning btn-sm delete">Delete</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
