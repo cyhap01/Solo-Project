@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const app = express(); //get server
 const Entry = require('./models/entry.model.js'); //importing Entry schema
 
-app.use(express.json); //to use middleware
+app.use(express.json()); //to use middleware
 
 //INITIALIZATION------------
 app.get('/', (req, res) => {
@@ -16,6 +16,17 @@ app.get('/api/entries', async (req, res) => {
   try {
     const entries = await Entry.find(req.body);
     res.status(200).json(entries);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+//GETTING a specific JOURNAL Date entry--------
+app.get('/api/entry/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const entry = await Entry.findById(id);
+    res.status(200).json(entry);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
@@ -49,6 +60,6 @@ mongoose //connecting to DB
 pswd: 0CgyY4VUOiGbyGrV
 username: admin
 
-
+JSON chrome extension 51.
 
 */
