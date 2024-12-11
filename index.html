@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CHAPTERS Journal App </title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body style="color: black ">
+    <div class="container 1">
+      <div class="container 2">
+        <h1 class="header">
+          <strong>CHAPTERS <br />Journal App</strong>
+        </h1>
+      </div>
+      <div class="form">
+        <form id="journal-form" autocomplete="off">
+          <div class="fields1">
+            <label for="date">Today's Date:</label>
+                    <input type="date" id="date" name="date" required><br><br>
+          </div>
+          <div id="date" style="margin-top: 10px"></div>
+
+
+          <div class="fields2">
+            <label for="feelings">How are you feeling?</label>
+            <input
+              id="feelings"
+              type="text"
+              placeholder=" Tells me your emotions."
+            />
+          </div>
+          <div id="feelings" style="margin-top: 20px"></div>
+
+
+           <div class="fields3">
+            <label for="Entry">Entry</label>
+            <textarea id="entry"
+            type="text"
+            placeholder=" When you're ready tell me everything.">
+            </textarea>
+            <button type="Enter">Create</button>
+            
+          </div>  
+        </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

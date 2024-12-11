@@ -1,0 +1,14 @@
+body {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(45deg, rgb(71, 231, 212), rgb(195, 210, 150));
+  text-align: center;
+}
+
+#journal-form {
+  background-color: rgba(24, 14, 14, 0);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
