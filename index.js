@@ -1,3 +1,16 @@
+//----REACT FRONT END-----------
+import React from 'react';
+import ReactDom from 'react-dom';
+import App from './components/App';
+
+ReactDom.render(<App />, document.getElementById('root'));
+
+
+
+
+
+//----------EXPRESS BACKEND----------
+
 const express = require('express'); //getting express server
 const mongoose = require('mongoose'); //mongoose to connect to mongoDB
 const app = express(); //get server
@@ -38,5 +51,8 @@ pswd: 0CgyY4VUOiGbyGrV
 username: admin
 
 JSON chrome extension 51.
+
+transpiler converts one file of code to another for the browser to understand; eg Babel, converts to JS
+model bundle- takes a bunch of files and bundles them and loads then in a correct order eg webpack
 
 */
