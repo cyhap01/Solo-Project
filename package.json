@@ -19,7 +19,8 @@
     "mongoose": "^8.8.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "webpack": "^5.97.1"
+    "webpack": "^5.97.1",
+    "sass-loader": "^12.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",

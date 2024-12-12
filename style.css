@@ -3,7 +3,7 @@ body {
   flex-direction: column;
   background: rgb(196, 217, 202);
   text-align: center;
-  width: 50%; 
+  width: 50%;
   height: 100;
 }
 .header p {
@@ -20,8 +20,8 @@ body {
 
 label {
   width: 100px;
-  display: inline-block;
-  text-align: right;
+  /* //display: inline-block; */
+  text-align: start;
 }
 
 .fields3 {

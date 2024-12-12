@@ -12,6 +12,7 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'build'),
   },
+
   module: {
     rules: [
       {
@@ -44,13 +45,16 @@ module.exports = {
       patterns: [{ from: './style.css' }],
     }),
   ],
-  //   devServer: {
-  //     static: {
-  //       directory: path.join(__dirname, './build'),
-  //     },
-  //     proxy: {
-  //       '/api': 'http://localhost:3000',
-  //       secure: false,
-  //     },
-  //   },
+  devServer: {
+    liveReload: true,
+    static: {
+      directory: path.join(__dirname, './build'),
+    },
+    proxy: [
+      {
+        '/api': 'http://localhost:3000',
+        secure: false,
+      },
+    ],
+  },
 };

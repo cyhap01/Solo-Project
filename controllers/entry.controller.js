@@ -27,6 +27,7 @@ const getEntry = async (req, res) => {
 //POSTING/Creating a new Entry----------
 
 const createEntry = async (req, res) => {
+  const { date, feelings, entry } = req.body;
   try {
     const entry = await Entry.create(req.body); //create an entry instance
     res.status(200).json(entry);

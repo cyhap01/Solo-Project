@@ -3,55 +3,81 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CHAPTERS Journal App </title>
-    <link rel="stylesheet" href="style.css">
+    <title>CHAPTERS Journal App</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container 1">
-        <h1 class="header">
-          <strong>CHAPTERS <br />Journal App</strong>
-          <p> WELCOME:
-            <br>
-            FOR: You; the little Prince/Princess, Teenager, Young adult, Creative composer, Musician, Poet, Artist and anyone else. 
-            <br>
-            <br>
-            PURPOSE:<n></n> Write whatever's on your mind. Place it here. All the Good, the Bad, Highs and lows,Chapter provides you with a place to express your emotions and heal at your own pace. 
-            <br>
-            <br>
-            MOTTO:<n></n>
-             <i>"Have Courage and Be Kind</i> <br>
-                   <i> "Continue to Write your own Ending"</i>  
-           </p>
-        </h1>
-      </div>
-      <div class="form">
-        <form id="journal-form" autocomplete="off" method="post">
-        
-            <label for="date">Today's Date:</label>
-            <input type="date" id="date" name="date" required>
-          
-          <div id="date" style="margin-top: 10px"></div>
-
-            <label for="feelings">How are you feeling?</label>
-            <input
-              id="feelings"
-              type="text"
-              placeholder=" I'm feeling ..."
-            />
-          <div id="feelings" style="margin-top: 10px"></div>
-
-            <label for="Entry">Entry</label>
-            <textarea id="entry" style=" height: 50px"
-            type="text"
-            placeholder=" When you're ready tell me everything.">
-            </textarea>
-            <button type="Enter">Create</button>
-            
-          </div>  
-        </form>
-        </div>
-      </div>
+      <h1 class="header">
+        <strong>CHAPTERS <br />Journal App</strong>
+        <p>
+          WELCOME:
+          <br />
+          FOR: You; the little Prince/Princess, Teenager, Young adult, Creative
+          composer, Musician, Poet, Artist and anyone else.
+          <br />
+          <br />
+          PURPOSE:<n></n> Whatever's on your mind, Place it here. All the Good,
+          the Bad, Highs and Lows,Chapter provides you with a place to express
+          your emotions and heal at your own pace.
+          <br />
+          <br />
+          MOTTO:<n></n> <i>"Have Courage and Be Kind</i> <br />
+          <i> "Continue to Write your own Ending"</i>
+        </p>
+      </h1>
     </div>
+    <div class="form">
+      <form id="journal-form" autocomplete="off" method="post">
+        <label for="date">Today's Date:</label>
+        <input type="date" id="date" name="date" required />
+
+        <div id="date" style="margin-top: 10px"></div>
+
+        <label for="feelings">How are you feeling?</label>
+        <input id="feelings" type="text" placeholder=" I'm feeling ..." />
+        <div id="feelings" style="margin-top: 10px"></div>
+
+        <label for="Entry">Entry</label>
+        <textarea
+          id="entry"
+          style="height: 50px"
+          type="text"
+          placeholder=" When you're ready tell me everything."
+        >
+        </textarea>
+        <button type="Enter" style="width: 50px">Create</button>
+
+        <label for="get">Retrieve Entry</label>
+        <input
+          id="get"
+          type="text"
+          placeholder=" Please enter an entry's date..."
+        />
+        <div id="get" style="margin-top: 10px"></div>
+
+        <label for="update">Update Entry</label>
+        <input
+          id="update"
+          type="text"
+          placeholder=" Please enter an entry's date..."
+        />
+        <button type="update" style="width: 50px">Update</button>
+        <div id="update" style="margin-top: 10px"></div>
+
+        <label for="update">Delete Entry</label>
+        <input
+          id="delete"
+          type="text"
+          placeholder=" Please enter an entry's date..."
+        />
+        <button type="delete" style="width: 50px">Delete</button>
+        <div id="update" style="margin-top: 10px"></div>
+        <div id="feelings" style="margin-top: 10px"></div>
+      </form>
+    </div>
+    <div id="entries"></div>
+
     <div id="root"></div>
   </body>
 </html>
