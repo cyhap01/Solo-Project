@@ -1,7 +1,7 @@
 body {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(45deg, rgb(71, 231, 212), rgb(195, 210, 150));
+  background: white;
   text-align: center;
 }
 

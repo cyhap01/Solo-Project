@@ -1,13 +1,18 @@
 body {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(45deg, rgb(71, 231, 212), rgb(195, 210, 150));
+  background: rgb(196, 217, 202);
   text-align: center;
+  width: 50%; 
+  height: 100;
+}
+.header p {
+  font-size: small;
+  text-align: justify;
 }
 
 #journal-form {
-  background-color: rgba(24, 14, 14, 0);
-  text-align: center;
+  text-align: start;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
